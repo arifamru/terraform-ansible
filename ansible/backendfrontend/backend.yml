@@ -8,6 +8,6 @@ services:
       DATABASE_USERNAME: "people"
       DATABASE_PASSWORD: "people123"
       DATABASE_DATABASE: "people" 
-      DATABASE_HOST: "mysqldev.cjliodnjc26s.ap-southeast-2.rds.amazonaws.com"
+      DATABASE_HOST: "awsss.com"
       DATABASE_PORT: 3306
       BASE_URL_PORT: 5000
