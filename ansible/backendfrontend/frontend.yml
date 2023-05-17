@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  frontend-contoh:
+    image: giovana02/cilist-frontend
+    ports:
+      - 3000:3000
+    environment:
+      REACT_APP_BACKEND_URL: "http://3.27.106.196:5000"

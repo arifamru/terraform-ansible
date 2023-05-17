@@ -1,0 +1,20 @@
+---
+- name: main backend
+  hosts: host0
+  become: true
+
+  tasks:
+    - name: Create web directory
+      file: path=test/ mode=775 state=directory
+
+    - name: Copy file backend.yaml
+      template: src=backend.yml dest=test/backend.yml    
+
+    - name: Compose up for backend
+      shell: docker-compose -f test/backend.yml up -d  
+
+    - name: Copy file frontend.yaml
+      template: src=frontend.yml dest=test/frontend.yml    
+
+    - name: Compose up for frontend
+      shell: docker-compose -f test/frontend.yml up -d  

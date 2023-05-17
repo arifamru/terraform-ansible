@@ -1,0 +1,23 @@
+---
+- name: Install Docker for Server
+  hosts: host0
+  become: true
+
+  tasks:
+    - name: Install python 
+      apt:
+        name: python3
+        state: latest
+        # VERSI YANG KALIAN DEFINDN DI NAME (TAPI KALAU DIKOSONGINNN AKAN KE LATEST)
+        
+    - name: apt install pip
+      apt:
+        name: python3-pip
+
+    - name: pip install docker
+      pip:
+        name: docker
+
+    - name: pip install docker-compose
+      pip:
+        name: docker-compose
